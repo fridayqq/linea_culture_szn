@@ -1,5 +1,7 @@
 # Linea Culture SZN
 
+https://app.layer3.xyz/campaigns/linea-culture-szn?slug=linea-culture-szn
+
 Минтит НФТ Linea Culture SZN на NFTS2ME.
 
 ## Формат блокнотов
