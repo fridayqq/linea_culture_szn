@@ -23,6 +23,7 @@ logger.add(stderr, format="<lm>{time:YYYY-MM-DD HH:mm:ss}</lm> | <level>{level: 
 
 quest_name = "W3: AscendTheEnd"
 quest_link = "https://app.layer3.xyz/quests/w3-ascendtheend-1?slug=w3-ascendtheend-1"
+contract = "0xBcFa22a36E555c507092FF16c1af4cB74B8514C8"
 
 
 def create_web3_instance(proxy):
@@ -92,7 +93,7 @@ def launchpad_buy(private_key, address_wallet, to_contract, web3):
     signed_tx = web3.eth.account.sign_transaction(tx_data, private_key)
     
     try:
-        raw_tx_hash = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
+        raw_tx_hash = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
         tx_hash = web3.to_hex(raw_tx_hash)
         tx_receipt = web3.eth.wait_for_transaction_receipt(raw_tx_hash, timeout=600)
         status = tx_receipt.status
@@ -143,7 +144,7 @@ def main():
         web3 = create_web3_instance(proxy)
         address_wallet = web3.eth.account.from_key(key).address
         logger.info(f'{number_wallets}/{count_wallets} - {address_wallet} (Proxy: {proxy})')
-        launchpad_buy(key, address_wallet, '0xBcFa22a36E555c507092FF16c1af4cB74B8514C8', web3)
+        launchpad_buy(key, address_wallet, contract, web3)
         time.sleep(15)
             
         sleep_delay = random.randint(time_delay_min, time_delay_max)
