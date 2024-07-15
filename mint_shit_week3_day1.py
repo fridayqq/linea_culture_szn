@@ -21,7 +21,7 @@ private_keys = "private_keys.txt"  # Файл со списком приватн
 logger.remove()
 logger.add(stderr, format="<lm>{time:YYYY-MM-DD HH:mm:ss}</lm> | <level>{level: <8}</level>| <lw>{message}</lw>")
 
-quest_name = "=====================W3w3W3====================="
+quest_name = "W3: AscendTheEnd"
 quest_link = "https://app.layer3.xyz/quests/w3-ascendtheend-1?slug=w3-ascendtheend-1"
 
 
