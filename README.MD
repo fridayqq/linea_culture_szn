@@ -2,7 +2,7 @@
 
 https://app.layer3.xyz/campaigns/linea-culture-szn?slug=linea-culture-szn
 
-Минтит НФТ Linea Culture SZN на NFTS2ME.
+Минтит НФТ Linea Culture SZN.
 
 ## Формат блокнотов
 
@@ -13,6 +13,7 @@ http://user:pass@ip:port
 ```
 
 Каждый кошелек должен использовать один прокси.
+
 
 ### time_delay
 
